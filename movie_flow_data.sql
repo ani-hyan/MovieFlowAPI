@@ -13,7 +13,7 @@ VALUES
     ('2014-11-07', 'Interstellar', 169, 'English'),
     ('2013-06-21', 'The Heat', 117, 'English');
 
-INSERT INTO movie_flow.def_genre (name)
+INSERT INTO def_genre (name)
 VALUES 
     ('Action'),
     ('Drama'),
@@ -26,7 +26,7 @@ VALUES
     ('Adventure'),
     ('Documentary');
 
-INSERT INTO movie_flow.actor (first_name, last_name, nationality, gender, birth_date)
+INSERT INTO actor (first_name, last_name, nationality, gender, birth_date)
 VALUES
     ('Leonardo', 'DiCaprio', 'American', 'Male', '1974-11-11'),
     ('Song', 'Kang-ho', 'South Korean', 'Male', '1967-01-17'),
@@ -52,7 +52,7 @@ VALUES
 	('Sandra', 'Bullock', 'American', 'Female', '1964-07-26'),
     ('Melissa', 'McCarthy', 'American', 'Female', '1970-08-26');
 	
-INSERT INTO movie_flow.def_external_platform (name, founded_date)
+INSERT INTO def_external_platform (name, founded_date)
 VALUES 
     ('Netflix', '1997-08-29'),
     ('Hulu', '2007-10-29'),
@@ -60,7 +60,7 @@ VALUES
     ('Disney+', '2019-11-12'),
     ('HBO Max', '2020-05-27');
 
-INSERT INTO movie_flow.def_provider_company (name, founded_date)
+INSERT INTO def_provider_company (name, founded_date)
 VALUES 
     ('DNEG', '1988-01-01'),
     ('Barunson E&A', '1996-12-27'),
@@ -76,7 +76,7 @@ VALUES
     ('Paramount Pictures', '1912-05-08'),
     ('Legendary Entertainment', '2000-01-01');
 
-INSERT INTO movie_flow.rating (rating_source, rate, max_rate, movie_id)
+INSERT INTO rating (rating_source, rate, max_rate, movie_id)
 VALUES 
     ('IMDb', 8.7, 10, 1),  -- Inception
     ('Rotten Tomatoes', 9.0, 10, 2),  -- Parasite
@@ -89,7 +89,7 @@ VALUES
     ('IMDb', 8.6, 10, 9),  -- Interstellar
     ('Rotten Tomatoes', 7.7, 10, 10);  -- The Heat
 
-INSERT INTO movie_flow.n2n_movie_to_actor (movie_id, actor_id)
+INSERT INTO n2n_movie_to_actor (movie_id, actor_id)
 VALUES 
     (1, 1),  -- Inception - Leonardo DiCaprio
     (2, 2),  -- Parasite - Song Kang-ho
