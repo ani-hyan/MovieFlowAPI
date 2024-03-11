@@ -112,7 +112,7 @@ VALUES
     (10, 19),  -- The Heat - Anne Hathaway
     (10, 20);  -- The Heat - Melissa McCarthy
 
-INSERT INTO n2n_movie_to_external_platform (movie_id, external_platform_id, movie_url)
+INSERT INTO movie_to_external_platform_link (movie_id, external_platform_id, movie_url)
 VALUES 
     (1, 1, 'https://netflix.com/inception'),  -- Inception on Netflix
     (2, 2, 'https://hulu.com/parasite'),  -- Parasite on Hulu
