@@ -48,7 +48,7 @@ CREATE TABLE IF NOT EXISTS n2n_movie_to_actor (
     actor_id INT NOT NULL REFERENCES actor(id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
-CREATE TABLE IF NOT EXISTS n2n_movie_to_external_platform (
+CREATE TABLE IF NOT EXISTS movie_to_external_platform_link (
     movie_id INT NOT NULL REFERENCES movie(id) ON DELETE CASCADE ON UPDATE CASCADE,
     external_platform_id INT NOT NULL REFERENCES actor(id) ON DELETE CASCADE ON UPDATE CASCADE,
     movie_url TEXT NOT NULL,
@@ -57,12 +57,10 @@ CREATE TABLE IF NOT EXISTS n2n_movie_to_external_platform (
 
 CREATE TABLE IF NOT EXISTS n2n_movie_to_genre (
     movie_id INT NOT NULL REFERENCES movie(id) ON DELETE CASCADE ON UPDATE CASCADE,
-    genre_id INT NOT NULL REFERENCES actor(id) ON DELETE CASCADE ON UPDATE CASCADE,
-    PRIMARY KEY (movie_id, genre_id)
+    genre_id INT NOT NULL REFERENCES actor(id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE IF NOT EXISTS n2n_movie_to_provider_company (
     movie_id INT NOT NULL REFERENCES movie(id) ON DELETE CASCADE ON UPDATE CASCADE,
-    provider_company_id INT NOT NULL REFERENCES actor(id) ON DELETE CASCADE ON UPDATE CASCADE,
-    PRIMARY KEY (movie_id, provider_company_id)
+    provider_company_id INT NOT NULL REFERENCES actor(id) ON DELETE CASCADE ON UPDATE CASCADE
 );
