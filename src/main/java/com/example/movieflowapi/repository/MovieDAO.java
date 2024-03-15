@@ -2,12 +2,13 @@ package com.example.movieflowapi.repository;
 
 import com.example.movieflowapi.model.dto.Actor;
 import com.example.movieflowapi.model.dto.Movie;
-import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
+
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.jdbc.core.namedparam.SqlParameterSource;
 import org.springframework.stereotype.Repository;
 
@@ -58,7 +59,7 @@ public class MovieDAO {
         return executeQuery(ACTOR_BASED_ON_RATING_QUERY, null, (rs, rowNum) -> Actor.movieMapper(rs));
     }
 
-    public List<Movie> getComediesBasedOnNames(List<String> names) {
+    public List<Movie> getComediesBasedOnActorNames(List<String> names) {
         SqlParameterSource parameterSource = new MapSqlParameterSource("names", names);
         return executeQuery(COMEDY_FILTER_BY_NAME_QUERY, parameterSource, (rs, rowNum) -> Movie.movieMapper(rs));
     }

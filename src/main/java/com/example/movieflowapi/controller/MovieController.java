@@ -5,7 +5,7 @@ import com.example.movieflowapi.model.dto.Movie;
 import com.example.movieflowapi.repository.MovieDAO;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.antlr.v4.runtime.misc.NotNull;
+import org.jetbrains.annotations.NotNull;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
@@ -24,8 +24,8 @@ public class MovieController {
     private final MovieDAO movieDao;
 
     @GetMapping("/comedies")
-    public ResponseEntity<List<Movie>> getComediesBasedOnNames(@RequestParam(value = "names") @NotNull List<String> names) {
-        return ResponseEntity.ok(movieDao.getComediesBasedOnNames(names));
+    public ResponseEntity<List<Movie>> getComediesBasedOnActorNames(@RequestParam(value = "actorNames") @NotNull List<String> actorNames) {
+        return ResponseEntity.ok(movieDao.getComediesBasedOnActorNames(actorNames));
     }
 
     @GetMapping("/genre")
