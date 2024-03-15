@@ -1,16 +1,20 @@
 package com.example.movieflowapi.model.dto;
 
-import lombok.Data;
-import org.springframework.stereotype.Component;
+import lombok.Builder;
 
-import java.util.Date;
-@Data
-@Component
-public class Actor {
-    private int id;
-    private String firstName;
-    private String lastName;
-    private String nationality;
-    private String gender;
-    private Date birthDate;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+@Builder
+public record Actor(
+        String firstName,
+        String lastName,
+        String movieName
+) {
+    public static Actor movieMapper(ResultSet rs) throws SQLException {
+        return Actor.builder()
+                .firstName(rs.getString("first_name"))
+                .lastName(rs.getString("last_name"))
+                .movieName(rs.getString("title"))
+                .build();
+    }
 }

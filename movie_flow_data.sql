@@ -1,6 +1,6 @@
 SET search_path = movie_flow;
 
-INSERT INTO movie_flow.movie (release_date, description, duration_mins, language)
+INSERT INTO movie_flow.movie (release_date, title, duration_mins, language)
 VALUES 
     ('2022-01-15', 'Inception', 148, 'English'),
     ('2019-05-02', 'Parasite', 132, 'Korean'),

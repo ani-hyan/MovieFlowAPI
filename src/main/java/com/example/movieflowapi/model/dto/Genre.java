@@ -1,11 +1,10 @@
 package com.example.movieflowapi.model.dto;
 
-import lombok.Data;
-import org.springframework.stereotype.Component;
+import lombok.Builder;
 
-@Data
-@Component
-public class Genre {
-    private int id;
-    private String name;
+@Builder
+public record Genre(
+        Integer id,
+        String name
+) {
 }
