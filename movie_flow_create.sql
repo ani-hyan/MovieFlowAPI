@@ -4,7 +4,7 @@ SET search_path = movie_flow;
 CREATE TABLE IF NOT EXISTS movie (
                                      id SERIAL PRIMARY KEY,
                                      release_date DATE NOT NULL,
-                                     description TEXT,
+                                     title TEXT,
                                      duration_mins INTEGER,
                                      language TEXT NOT NULL
 );
