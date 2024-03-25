@@ -1,4 +1,4 @@
-package com.example.movieflowapi.repository;
+package com.example.movieflowapi.repository.jdbc;
 
 import com.example.movieflowapi.model.dto.Actor;
 import com.example.movieflowapi.model.dto.Movie;

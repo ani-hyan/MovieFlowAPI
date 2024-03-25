@@ -2,7 +2,7 @@ package com.example.movieflowapi.controller;
 
 import com.example.movieflowapi.model.dto.Actor;
 import com.example.movieflowapi.model.dto.Movie;
-import com.example.movieflowapi.repository.MovieDAO;
+import com.example.movieflowapi.repository.jdbc.MovieDAO;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.jetbrains.annotations.NotNull;
